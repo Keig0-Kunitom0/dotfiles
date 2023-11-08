@@ -1,5 +1,4 @@
-### alias
-
+### alias ###
 # zsh alias
 alias sz='source ~/.zshrc'
 alias vz='vim ~/.zshrc'
