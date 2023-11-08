@@ -1,15 +1,22 @@
-### zsh alias
+### alias
+
+# zsh alias
 alias sz='source ~/.zshrc'
 alias vz='vim ~/.zshrc'
 
-### Git alias
+# Git alias
 alias gs='git status -sb'
 alias ga='git add'
 alias gc='git commit -m'
 alias gpu='git push origin $(git rev-parse --abbrev-ref HEAD)'
 alias gpl='git pull origin $(git rev-parse --abbrev-ref HEAD)'
 
-### Docker alias
+# Docker alias
 alias dcu='docker-compose up'
 alias dcp='docker-compose ps'
 alias dcd='docker-compose down'
+
+
+# cdを指定せずにディレクトリ移動できる
+setopt auto_cd
+
