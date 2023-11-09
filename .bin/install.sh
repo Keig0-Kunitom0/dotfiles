@@ -12,6 +12,8 @@ BASEDIR=$(dirname $0)
 cd $BASEDIR
 
 # dotfilesディレクトリにある、ドットから始まり2文字以上の名前のファイルに対して
+echo "start setup..."
+
 for f in .??*; do
     [ "$f" = ".git" ] && continue
     [ "$f" = ".gitconfig.local.template" ] && continue
@@ -20,3 +22,12 @@ for f in .??*; do
     # シンボリックリンクを貼る
     ln -snfv ${PWD}/"$f" ~/
 done
+
+cat << END
+
+**************************************************
+DOTFILES SETUP FINISHED! bye.
+**************************************************
+
+END
+
