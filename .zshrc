@@ -1,7 +1,16 @@
+# rbenvの参照先を変える
+export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH=$PATH:/Users/kunitomo/dotfiles 
+
+export ZDOTDIR=${HOME}/dotfiles/zsh
+
 ### alias ###
+
 # zsh alias
 alias sz='source ~/.zshrc'
 alias vz='vim ~/.zshrc'
+alias v='nvim .'
 
 # Git alias
 alias gs='git status -sb'
