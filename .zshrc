@@ -18,4 +18,3 @@ alias dcd='docker-compose down'
 
 # cdを指定せずにディレクトリ移動できる
 setopt auto_cd
-

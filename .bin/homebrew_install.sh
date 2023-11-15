@@ -33,6 +33,7 @@ formulas=(
     bat
     nodebrew
     tree
+    ripgrep
     yarn
     sqlite
     sqlite
