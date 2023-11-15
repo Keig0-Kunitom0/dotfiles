@@ -1,0 +1,33 @@
+local opt = vim.opt
+
+vim.scriptencoding = 'utf-8'
+vim.opt.encoding = 'utf-8'
+vim.opt.fileencoding = 'utf-8'
+
+opt.wildmenu = true -- コマンドラインで補完
+opt.mouse = 'a' --マウス操作を有効化
+opt.cmdheight = 1 -- コマンドラインの表示行数
+opt.laststatus = 2 -- 下部にステータスラインを表示
+opt.showcmd = true -- コマンドラインに入力されたコマンドを表示
+opt.hlsearch = true -- ハイライト検索を有効
+opt.incsearch = true -- インクリメンタルサーチを有効
+opt.matchtime = 1 -- 入力された文字列がマッチするまでにかかる時間
+opt.background = "dark" -- ダークカラーを使用する
+opt.shiftwidth = 2 -- シフト幅を2に設定する
+opt.tabstop = 2 -- タブ幅を2に設定する
+opt.expandtab = true -- タブ文字をスペースに置き換える
+opt.autoindent = true -- 自動インデントを有効にする
+opt.smartindent = true -- インデントをスマートに調整する
+opt.number = true -- 行番号を表示
+opt.wrap = true -- テキストの自動折り返しを有効に
+opt.showtabline = 2 -- タブラインを表示
+opt.visualbell = true -- ビープ音を表示する代わりに画面をフラッシュ
+opt.showmatch = true -- 対応する括弧をハイライト表示
+opt.winblend = 0 -- ウィンドウの不透明度
+opt.pumblend = 0 -- ポップアップメニューの不透明度
+opt.showtabline = 2 -- タブラインを表示する設定
+opt.signcolumn = "yes" -- 行数表示の横に余白を追加
+opt.clipboard = "unnamedplus" -- クリップボードコピー
+vim.opt.swapfile = false --スワップファイルを生成しない
+vim.opt.termguicolors = true
+vim.opt.cursorline = true -- カーソル行ハイライト

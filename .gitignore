@@ -22,7 +22,6 @@
 !/.zsh/completion/
 /.zsh/completion/**
 !/.bin/
-!/.bin/**
 !/.bin.local
 !/.tmux.conf
 !/.tmux/
@@ -43,12 +42,13 @@
 !/.xinitrc
 !/.xprofile
 !/.xsessionrc
-!/nvim/**
-!/tmux/**
+!/nvim/
+!/tmux/
 !/.config/
 !/.config/**
 !/.gitignore_global
 !/.gitconfig_shared
+!/Makefile
 
 !/README.md
 !/LICENSE
