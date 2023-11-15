@@ -1,7 +1,7 @@
 # rbenvの参照先を変える
 export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
-export PATH=$PATH:/Users/kunitomo/dotfiles 
+export PATH=$PATH:/Users/kunitomo/dotfiles
 
 export ZDOTDIR=${HOME}/dotfiles/zsh
 
@@ -23,7 +23,6 @@ alias gpl='git pull origin $(git rev-parse --abbrev-ref HEAD)'
 alias dcu='docker-compose up'
 alias dcp='docker-compose ps'
 alias dcd='docker-compose down'
-
 
 # cdを指定せずにディレクトリ移動できる
 setopt auto_cd
