@@ -9,11 +9,11 @@ export ZDOTDIR=${HOME}/dotfiles/zsh
 
 # zsh alias
 alias sz='source ~/.zshrc'
-alias vz='vim ~/.zshrc'
+alias vz='nvim ~/.zshrc'
 alias v='nvim .'
 
 # Git alias
-alias gs='git status -sb'
+alias gs='git status'
 alias ga='git add'
 alias gc='git commit -m'
 alias gpu='git push origin $(git rev-parse --abbrev-ref HEAD)'
