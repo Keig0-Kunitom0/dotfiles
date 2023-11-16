@@ -11,11 +11,20 @@ return {
       direction = "float",
       hidden = true
     })
+    local float_term = Terminal:new({
+      direction = "float",
+      hidden = true
+    })
 
     function _lazygit_toggle()
       lazygit:toggle()
     end
 
+    function _float_term()
+      float_term:toggle()
+    end
+
     vim.api.nvim_set_keymap("n", "lg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "lt", "<cmd>lua _float_term()<CR>", { noremap = true, silent = true })
   end
 }
