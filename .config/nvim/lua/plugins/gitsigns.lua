@@ -19,5 +19,8 @@ return {
         untracked    = { text = '┆' }
       }
     })
+    vim.keymap.set("n", "g]", "<cmd>Gitsigns next_hunk<CR>")
+    vim.keymap.set("n", "g[", "<cmd>Gitsigns next_hunk<CR>")
+    vim.keymap.set("n", "hd", "<cmd>Gitsigns diffthis<CR>")
   end
 }
