@@ -50,7 +50,6 @@
 !/.gitignore_global
 !/.gitconfig_shared
 !/Makefile
-
 !/README.md
 !/LICENSE
 !.gitignore
