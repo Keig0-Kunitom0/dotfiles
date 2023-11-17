@@ -68,7 +68,7 @@ function peco-cdr () {
   fi
 }
 zle -N peco-cdr
-bindkey '^E' peco-cdr
+bindkey '^W' peco-cdr
 
 ## カレントディレクトリ以下のディレクトリ検索・移動 Ctrl-X
 function find_cd() {
