@@ -5,6 +5,8 @@ return {
   config = function()
     vim.keymap.set('n', '<C-.>', '<Cmd>BufferLineCycleNext<CR>', {})
     vim.keymap.set('n', '<C-,>', '<Cmd>BufferLineCyclePrev<CR>', {})
+    vim.keymap.set('n', '<leader>q', '<CMD>BufferLinePickClose<CR>')
+    vim.keymap.set('n', '<leader>wq', '<CMD>BufferLineCloseOthers<CR>')
     local bufferline = require('bufferline')
     require("bufferline").setup {
       options = {
