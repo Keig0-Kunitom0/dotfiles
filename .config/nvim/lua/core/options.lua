@@ -31,3 +31,4 @@ opt.clipboard = "unnamedplus" -- クリップボードコピー
 vim.opt.swapfile = false --スワップファイルを生成しない
 vim.opt.termguicolors = true
 vim.opt.cursorline = true -- カーソル行ハイライト
+vim.cmd([[let &fcs='eob: ']]) -- 空行のチルダ（〜）の表示を消す
