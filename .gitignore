@@ -54,3 +54,6 @@
 !/LICENSE
 !.gitignore
 !.gitkeep
+!/zsh/
+!/iterm/
+!/homebrew_install.sh
