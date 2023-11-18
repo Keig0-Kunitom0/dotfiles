@@ -17,7 +17,8 @@ return {
         topdelete    = { text = "" },
         changedelete = { text = '~' },
         untracked    = { text = '┆' }
-      }
+      },
+      current_line_blame = true
     })
     vim.keymap.set("n", "g]", "<cmd>Gitsigns next_hunk<CR>")
     vim.keymap.set("n", "g[", "<cmd>Gitsigns next_hunk<CR>")
