@@ -3,6 +3,10 @@ export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH=$PATH:/Users/kunitomo/dotfiles
 
+# nodebrewのパスを通す（これがないとnodebrew useでバージョンを切り替えようとしても切り替わらない)
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=/opt/homebrew/var/nodebrew/current/bin:$PATH
+
 # dotfiles配下のzshを参照する
 export ZDOTDIR=${HOME}/dotfiles/zsh
 
