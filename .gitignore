@@ -47,10 +47,8 @@
 !/.xinitrc
 !/.xprofile
 !/.xsessionrc
-!/nvim/
-!/tmux/
-!/.config/
-!/.config/**
+!/.config/nvim/
+!/.config/tmux/
 !/.gitignore_global
 !/.gitconfig_shared
 !/Makefile
