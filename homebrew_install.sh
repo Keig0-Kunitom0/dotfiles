@@ -40,6 +40,7 @@ formulas=(
     composer
     markdown
     ctags
+    nodebrew
 )
 
 echo "start brew install apps..."
