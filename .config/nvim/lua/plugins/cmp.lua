@@ -8,7 +8,8 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
-    'onsails/lspkind.nvim'
+    'onsails/lspkind.nvim',
+    'petertriho/cmp-git'
   },
   opts = function()
     local lspkind = require 'lspkind'
@@ -48,6 +49,7 @@ return {
         { name = "buffer" },
         { name = "nvim_lua" },
         { name = "path" },
+        { name = 'git'},
       },
       experimental = {
         ghost_text = true,
