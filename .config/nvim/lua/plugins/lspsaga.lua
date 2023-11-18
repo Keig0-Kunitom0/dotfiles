@@ -29,7 +29,8 @@ return {
 
     keymap("n", "K",  "<cmd>Lspsaga hover_doc<CR>")
     keymap('n', 'gh', '<cmd>Lspsaga finder<CR>')
-    -- keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
+    keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
+    keymap("n", "go", "<cmd>Lspsaga goto_definition<CR>")
     keymap("n", "ga", "<cmd>Lspsaga code_action<CR>")
     keymap("n", "gn", "<cmd>Lspsaga rename<CR>")
     keymap("n", "ge", "<cmd>Lspsaga show_line_diagnostics<CR>")
