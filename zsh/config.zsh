@@ -21,6 +21,15 @@ HISTFILE=$ZDOTDIR/.zsh-history
 HISTSIZE=100000
 SAVEHIST=1000000
 
+# 同一ホストで自分が動かしているすべてのzshのプロセスで履歴を共有
+setopt share_history
+
+# 重複を記録しない
+setopt hist_ignore_dups
+
+# ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
+setopt hist_ignore_all_dups
+
 ## 環境変数を補完
 setopt AUTO_PARAM_KEYS
 
@@ -30,7 +39,9 @@ setopt AUTO_PARAM_KEYS
 # zsh alias
 alias sz='source ~/.zshrc'
 alias vz='nvim ~/.zshrc'
-alias v='nvim .'
+alias nv='nvim .'
+alias v='vim .'
+
 
 # Git alias
 alias gs='git status'
