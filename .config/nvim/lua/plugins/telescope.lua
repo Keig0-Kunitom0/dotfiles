@@ -22,14 +22,24 @@ return {
     local telescope = require("telescope")
     telescope.setup({
       defaults = {
-        path_display = { "truncate " }
+        path_display = { "truncate " },
+        vimgrep_arguments = {
+          'rg',
+          '--color=never',
+          '--no-heading',
+          '--with-filename',
+          '--line-number',
+          '--column',
+          '--smart-case',
+          '--hidden',
+        },
       }
     })
     telescope.load_extension("fzf")
 
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<C-p>', builtin.find_files, {})
-    vim.keymap.set('n', '<C-g>', builtin.live_grep, {})
+    vim.keymap.set('n', '<C-p>', '<cmd>Telescope find_files hidden=true<CR>')
+    vim.keymap.set('n', '<C-g>', '<cmd>Telescope live_grep<CR>')
     vim.keymap.set('n', ';b', builtin.buffers, {})
     vim.keymap.set('n', ';g', builtin.git_status, {})
     vim.keymap.set('n', ';fh', builtin.help_tags, {})
@@ -37,5 +47,6 @@ return {
     vim.keymap.set('n', ';h', builtin.oldfiles, {})
     vim.keymap.set('n', ';gs', builtin.git_stash, {})
     vim.keymap.set('n', ';gb', builtin.git_branches, {})
+    vim.keymap.set('n', ';gc', builtin.git_bcommits, {})
   end
 }
