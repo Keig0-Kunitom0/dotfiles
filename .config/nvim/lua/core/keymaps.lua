@@ -24,7 +24,7 @@ keymap("n", "<Space>h", "^", opts)
 keymap("n", "<Space>l", "$", opts)
 
 -- ESC*10 でハイライトやめる
-keymap("n", "<Esc><Esc>", ":<C-u>set nohlsearch<Return>", opts)
+keymap("n", "<Tab><Tab>", ":<C-u>set nohlsearch<Return>", opts)
 
 -- 全行選択
 keymap("n", "<C-a>", "gg<S-v>G", opts)
