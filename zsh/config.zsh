@@ -2,43 +2,46 @@
 export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH=$PATH:/Users/kunitomo/dotfiles
-
 # nodebrewのパスを通す（これがないとnodebrew useでバージョンを切り替えようとしても切り替わらない)
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=/opt/homebrew/var/nodebrew/current/bin:$PATH
-
 # dotfiles配下のzshを参照する
 export ZDOTDIR=${HOME}/dotfiles/zsh
 
 # cdを指定せずにディレクトリ移動できる
 setopt auto_cd
-
 ## 環境変数を補完
 setopt AUTO_PARAM_KEYS
-
 ## 履歴保存管理
 HISTFILE=$ZDOTDIR/.zsh-history
-HISTSIZE=100000
-SAVEHIST=1000000
-
+ # 履歴ファイルに時刻を記載
+setopt extended_history
 # 同一ホストで自分が動かしているすべてのzshのプロセスで履歴を共有
 setopt share_history
-
+HISTSIZE=100000
+SAVEHIST=1000000
+# 同一ホストで自分が動かしているすべてのzshのプロセスで履歴を共有
+setopt share_history
 # 重複を記録しない
 setopt hist_ignore_dups
-
 # ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
 setopt hist_ignore_all_dups
-
 ## 環境変数を補完
 setopt AUTO_PARAM_KEYS
+# historyコマンドは履歴に登録しない
+setopt hist_no_store
+# 補完時にヒストリを自動的に展開
+setopt hist_expand
+# 履歴をインクリメンタルに追加
+setopt inc_append_history
+
 
 
 ### alias ###
 
 # zsh alias
 alias sz='source ~/.zshrc'
-alias vz='nvim ~/.zshrc'
+alias nvz='nvim ~/zsh/config.zsh'
 alias nv='nvim .'
 alias v='vim .'
 
@@ -49,19 +52,37 @@ alias ga='git add'
 alias gc='git commit -m'
 alias gpu='git push origin $(git rev-parse --abbrev-ref HEAD)'
 alias gpl='git pull origin $(git rev-parse --abbrev-ref HEAD)'
+alias gb='git branch'
+alias gco='git checkout'
+alias gsh='git stash'
+alias gsha='git stash apply'
+alias grh='git reset --hard HEAD^'
+alias grlrh='git reset --hard HEAD@{1}'
+alias gca='git commit --amend'
+
 
 # Docker alias
 alias dcu='docker-compose up'
 alias dcp='docker-compose ps'
 alias dcd='docker-compose down'
+alias dewb='docker-compose exec web /bin/bash'
+alias yarn-build='docker compose run --rm front sh -c "cd /myapp/frontend && yarn install && yarn build"'
+alias dcrw='docker-compose run --rm --service-ports web'
+alias dcrs='docker-compose run --rm --service-ports sidekiq'
+alias dst='docker stop $(docker ps -q)'
+alias dvpr='docker volume prune'
+alias dipr='docker image prune'
+alias dsypr='docker system prune'
 
+
+alias vim-credentials='vim /Users/k_kunitomo/.aws/credentials'
 
 # peco
 ## コマンド履歴検索 Ctrl-R
 function peco-history-selection() {
-  BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
-  CURSOR=$#BUFFER
-  zle reset-prompt
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
 }
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
