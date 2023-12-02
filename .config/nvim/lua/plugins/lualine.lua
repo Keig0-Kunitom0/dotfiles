@@ -1,6 +1,6 @@
 return {
-  'nvim-lualine/lualine.nvim',
   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
+  'nvim-lualine/lualine.nvim',
   config = function()
     require('lualine').setup({
       options = {
