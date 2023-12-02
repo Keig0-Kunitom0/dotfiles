@@ -34,6 +34,7 @@ formulas=(
     nodebrew
     tree
     ripgrep
+    lazygit
     yarn
     sqlite
     sqlite
