@@ -39,20 +39,7 @@ return {
             ),
           })
           or null_ls.builtins.formatting.rubocop
-        end),
-
-        -- Same as above, but with diagnostics.rubocop to make sure we use the proper rubocop version for the project
-        conditional(function(utils)
-          return utils.root_has_file("Gemfile")
-          and null_ls.builtins.diagnostics.rubocop.with({
-            command = "bundle",
-            args = vim.list_extend(
-            { "exec", "rubocop" },
-            null_ls.builtins.diagnostics.rubocop._opts.args
-            ),
-          })
-          or null_ls.builtins.diagnostics.rubocop
-        end),
+        end)
       }
     })
   end
