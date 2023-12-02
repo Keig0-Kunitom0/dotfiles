@@ -25,7 +25,6 @@ opt.visualbell = true -- ビープ音を表示する代わりに画面をフラ�
 opt.showmatch = true -- 対応する括弧をハイライト表示
 opt.winblend = 0 -- ウィンドウの不透明度
 opt.pumblend = 0 -- ポップアップメニューの不透明度
-opt.showtabline = 2 -- タブラインを表示する設定
 opt.signcolumn = "yes" -- 行数表示の横に余白を追加
 opt.clipboard = "unnamedplus" -- クリップボードコピー
 vim.opt.swapfile = false --スワップファイルを生成しない

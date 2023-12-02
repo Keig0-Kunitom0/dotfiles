@@ -1,5 +1,5 @@
 return {
-  event = 'LspAttach',
+  event = 'VimEnter',
   'nvimdev/lspsaga.nvim',
   -- cond = false,
   dependencies = {

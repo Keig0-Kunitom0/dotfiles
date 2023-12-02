@@ -1,41 +1,34 @@
 return {
+  event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
   "williamboman/mason.nvim", -- LSP Installer
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-    "nvim-lua/plenary.nvim",
+    "jayp0521/mason-null-ls.nvim",
   },
-  event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
   config = function()
     require("mason").setup {}
+
     local mason_lspconfig = require("mason-lspconfig")
-    -- 2. build-in LSP function
-    -- keyboard shortcut
-    local on_attach = function(_, bufnr)
-      vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-        vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false }
-      )
-      vim.opt.signcolumn = "yes"
-    end
+    local mason_null_ls = require("mason-null-ls")
 
-    local lsp = require("lspconfig")
-
-    mason_lspconfig.setup_handlers({
-      function(server_name)
-        local opts = {
-          capabilities = require("cmp_nvim_lsp").default_capabilities(),
-          on_attach = on_attach,
-          settings = {
-            ["omniSharp"] = {
-              useGlobalMono = "always"
-            }
-          },
-        }
-
-        lsp[server_name].setup(opts)
-      end,
+    mason_lspconfig.setup({
+      -- list of servers for mason to install
+      ensure_installed = {
+        -- install self
+        -- "gopls",
+        -- "solargraph",
+      },
+      -- auto-install configured servers (with lspconfig)
+      automatic_installation = true -- not the same as ensure_installed
     })
 
-    vim.cmd("LspStart") -- 初回起動時はBufEnterが発火しない
-  end,
+    mason_null_ls.setup({
+      -- list of formatters & linters for mason to install
+      ensure_installed = {
+        -- "rubocop", -- ruby formatter
+      },
+      -- auto-install configured formatters & linters (with null-ls)
+      automatic_installation = true -- not the same as ensure_installed
+    })
+  end
 }

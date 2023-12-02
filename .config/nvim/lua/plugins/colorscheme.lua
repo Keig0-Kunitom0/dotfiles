@@ -1,0 +1,10 @@
+return {
+	{
+    event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
+		"craftzdog/solarized-osaka.nvim",
+		priority = 1000,
+		config = function()
+      vim.cmd("colorscheme solarized-osaka")
+		end
+	}
+}

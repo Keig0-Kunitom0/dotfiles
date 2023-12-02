@@ -2,7 +2,7 @@ return {
   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
   "petertriho/nvim-scrollbar",
   config = function()
-    local colors = require("tokyonight.colors").setup()
+    local colors = require("solarized-osaka.colors").setup()
 
     require("scrollbar").setup({
       handle = {

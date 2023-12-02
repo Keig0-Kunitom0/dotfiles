@@ -1,7 +1,6 @@
 return {
-  -- Highlight, edit, and navigate code
-  'nvim-treesitter/nvim-treesitter',
   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
+  'nvim-treesitter/nvim-treesitter',
   dependencies = {
     'windwp/nvim-ts-autotag',
     'RRethy/nvim-treesitter-endwise'
@@ -11,14 +10,12 @@ return {
     -- configure nvim-tree
     nvim_treesitter.setup({
       highlight = { enable = true },
-      -- enable indentation
       indent = { enable = true },
-      -- enable autotagging (w/ nvim-ts-autotag plugin)
       autotag = { enable = true },
       endwise = { enable = true },
-      -- ensure these language parsers are installed
       ensure_installed = {
         "json",
+        "js",
         "javascript",
         "typescript",
         "tsx",
@@ -26,11 +23,6 @@ return {
         "html",
         "css",
         "markdown",
-        "svelte",
-        "graphql",
-        "bash",
-        "lua",
-        "vim",
         "dockerfile",
         "gitignore",
         "ruby",

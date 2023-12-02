@@ -5,6 +5,9 @@ return {
   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
   version = "*",
   config = function()
+    require("toggleterm").setup({
+      shell = vim.o.shell
+    })
     local Terminal = require("toggleterm.terminal").Terminal
     local lazygit = Terminal:new({
       cmd = "lazygit",
