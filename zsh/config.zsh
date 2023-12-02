@@ -75,7 +75,7 @@ alias dipr='docker image prune'
 alias dsypr='docker system prune'
 
 
-alias vim-credentials='vim /Users/k_kunitomo/.aws/credentials'
+alias vim-credentials='nvim /Users/k_kunitomo/.aws/credentials'
 
 # peco
 ## コマンド履歴検索 Ctrl-R
