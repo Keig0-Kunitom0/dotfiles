@@ -32,7 +32,7 @@ return {
     keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
     keymap("n", "go", "<cmd>Lspsaga goto_definition<CR>")
     keymap("n", "ga", "<cmd>Lspsaga code_action<CR>")
-    keymap("n", "gn", "<cmd>Lspsaga rename<CR>")
+    keymap("n", "rn", "<cmd>Lspsaga rename<CR>")
     keymap("n", "ge", "<cmd>Lspsaga show_line_diagnostics<CR>")
     keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
     keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
