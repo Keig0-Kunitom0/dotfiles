@@ -4,6 +4,7 @@
 
 /zsh/.zsh-history
 /zsh/.zsh_history
+/zsh/.zsh_local
 /.config/configstore/
 /.config/iterm2/
 /.config/karabiner/
