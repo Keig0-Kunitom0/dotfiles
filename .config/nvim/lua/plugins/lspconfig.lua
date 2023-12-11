@@ -12,11 +12,11 @@ return {
       filetypes = { "ruby" },
     })
 
-    lspconfig.rubocop.setup({
-      on_attach = on_attach,
-      cmd = { "rubocop", "--lsp" },
-      filetypes = { "ruby" },
-    })
+    -- lspconfig.rubocop.setup({
+    --   on_attach = on_attach,
+    --   cmd = { "rubocop", "--lsp" },
+    --   filetypes = { "ruby" },
+    -- })
 
     lspconfig.lua_ls.setup({
       on_attach = on_attach,
