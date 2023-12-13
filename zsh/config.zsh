@@ -8,6 +8,11 @@ export PATH=/opt/homebrew/var/nodebrew/current/bin:$PATH
 # dotfiles配下のzshを参照する
 export ZDOTDIR=${HOME}/dotfiles/zsh
 
+export PATH="/usr/local/bin:$PATH"
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export PATH=$PATH:/Users/k_kunitomo
+export PATH="/opt/homebrew/bin/:$PATH"
+
 # cdを指定せずにディレクトリ移動できる
 setopt auto_cd
 ## 環境変数を補完
