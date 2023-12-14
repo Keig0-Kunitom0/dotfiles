@@ -18,13 +18,18 @@ return {
         separator_style = {'', ''},
         show_close_icon = false,
         color_icons = true,
+        max_name_length = 30,
+        max_prefix_length = 30,
+        tab_size = 21,
+        modified_icon = "●",
+        close_icon = "",
+        -- close_icon = '',
+        left_trunc_marker = "",
+        right_trunc_marker = "",
         diagnostics = "nvim_lsp",
         offsets = {
-          {
-            filetype = "NvimTree",
-            text = "Explorer",
-            text_align = "center"
-          }
+          { filetype = "vista", text = "Tags", padding = 1 },
+          { filetype = "neo-tree", text = "Explorer", padding = 1 },
         }
       }
     })
