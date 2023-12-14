@@ -46,8 +46,9 @@ setopt inc_append_history
 
 # zsh alias
 alias sz='source ~/.zshrc'
+alias sz='nvim ~/.zshrc'
 alias nvz='nvim ~/zsh/config.zsh'
-alias nv='nvim .'
+alias nv='nvim'
 alias v='vim .'
 
 
