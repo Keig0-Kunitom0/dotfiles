@@ -45,7 +45,7 @@ return {
       dashboard.section.buttons.val = {
         dashboard.button("l", " ☑️   Lazy Git", ":lua _lazygit_toggle()<CR>"),
         dashboard.button("r", " 🚀  Recent File", ":Telescope oldfiles<CR>"),
-        dashboard.button("f", " 🎄  Find File", ":Telescope find_files<CR>"),
+        dashboard.button("f", " 🎄  Find File", ":Telescope find_files hidden=true<CR>"),
         dashboard.button('g', " 📗  Find Text", ':Telescope live_grep <CR>'),
         dashboard.button('n', " 📄  New File", ':ene <BAR> startinsert <CR>'),
         dashboard.button("q", " 🚪  Quit Nvim", ":qa<CR>"),
