@@ -1,18 +1,14 @@
-# rbenvの参照先を変える
-export PATH="~/.rbenv/shims:/usr/local/bin:$PATH"
+export PATH="~/.rbenv/shims:/usr/local/bin:$PATH" # rbenvの参照先を変える
 eval "$(rbenv init -)"
 export PATH=$PATH:/Users/kunitomo/dotfiles
-# nodebrewのパスを通す（これがないとnodebrew useでバージョンを切り替えようとしても切り替わらない)
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH # nodebrewのパスを通す（これがないとnodebrew useでバージョンを切り替えようとしても切り替わらない)
 export PATH=/opt/homebrew/var/nodebrew/current/bin:$PATH
-# dotfiles配下のzshを参照する
-export ZDOTDIR=${HOME}/dotfiles/zsh
-
+export ZDOTDIR=${HOME}/dotfiles/zsh # dotfiles配下のzshを参照する
 export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH=$PATH:/Users/k_kunitomo
 export PATH="/opt/homebrew/bin/:$PATH"
-export EDITOR='nvim'
+export EDITOR='nvim' # デフォルトエディターをneovimにする
 
 # cdを指定せずにディレクトリ移動できる
 setopt auto_cd
@@ -50,7 +46,6 @@ alias nvz='nvim ~/zsh/config.zsh'
 alias nv='nvim'
 alias v='vim .'
 
-
 # Git alias
 alias gs='git status'
 alias ga='git add'
@@ -65,7 +60,6 @@ alias grh='git reset --hard HEAD^'
 alias grlrh='git reset --hard HEAD@{1}'
 alias gca='git commit --amend'
 
-
 # Docker alias
 alias dcu='docker-compose up'
 alias dcp='docker-compose ps'
@@ -79,8 +73,9 @@ alias dvpr='docker volume prune'
 alias dipr='docker image prune'
 alias dsypr='docker system prune'
 
-
+# other
 alias vim-credentials='nvim /Users/k_kunitomo/.aws/credentials'
+
 
 # peco
 ## コマンド履歴検索 Ctrl-R
