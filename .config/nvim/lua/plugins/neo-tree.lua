@@ -50,7 +50,7 @@ return {
         },
       },
       window = {
-        width = 30,
+        width = 35,
         mappings = {
           ["o"] = "open",
           ["v"] = "open_vsplit",
