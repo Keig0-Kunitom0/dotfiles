@@ -12,6 +12,7 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH=$PATH:/Users/k_kunitomo
 export PATH="/opt/homebrew/bin/:$PATH"
+export EDITOR='nvim'
 
 # cdを指定せずにディレクトリ移動できる
 setopt auto_cd
@@ -41,12 +42,10 @@ setopt hist_expand
 setopt inc_append_history
 
 
-
 ### alias ###
 
 # zsh alias
 alias sz='source ~/.zshrc'
-alias sz='nvim ~/.zshrc'
 alias nvz='nvim ~/zsh/config.zsh'
 alias nv='nvim'
 alias v='vim .'
