@@ -20,12 +20,16 @@ return {
   },
   config = function()
     local telescope = require("telescope")
+    local actions = require('telescope.actions')
+
     telescope.setup({
       defaults = {
         mappings = {
           i = {
             ['<C-h>'] = 'which_key',
-            ['<C-[>'] = require('telescope.actions').close,
+            ['<C-c>'] = actions.close, -- close telescope
+            ["<C-]>"] = actions.cycle_history_next, -- cycle history next
+            ["<C-[>"] = actions.cycle_history_prev, -- cycle history
           },
         },
         path_display = { "truncate " },

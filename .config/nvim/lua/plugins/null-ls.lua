@@ -27,19 +27,6 @@ return {
             return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
           end,
         }),
-
-        -- Here we set a conditional to call the rubocop formatter. If we have a Gemfile in the project, we call "bundle exec rubocop", if not we only call "rubocop".
-        conditional(function(utils)
-          return utils.root_has_file("Gemfile")
-          and null_ls.builtins.formatting.rubocop.with({
-            command = "bundle",
-            args = vim.list_extend(
-            { "exec", "rubocop" },
-            null_ls.builtins.formatting.rubocop._opts.args
-            ),
-          })
-          or null_ls.builtins.formatting.rubocop
-        end)
       }
     })
   end
