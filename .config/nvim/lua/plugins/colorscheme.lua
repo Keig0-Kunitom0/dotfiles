@@ -1,29 +1,29 @@
-return {
-  'sainnhe/sonokai',
-  event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする,
-  config = function()
-    vim.g.sonokai_transparent_background = 1
-    vim.cmd("highlight ColorColumn guibg=DarkBlue")
-    vim.cmd("highlight Visual guibg=#555555")
-    vim.cmd("highlight DiffText guibg=DarkBlue")
-    vim.cmd("highlight TSPunctBracket guifg=#aaaaaa")
-    vim.cmd("highlight TSPunctDelimiter guifg=#aaaaaa")
-    vim.cmd("highlight TSLabel guifg=#FF9872")
-    vim.cmd("highlight TSSymbol guifg=#A4C6FF")
-    vim.cmd("highlight TSFunction guifg=#CC99FF")
-    vim.cmd("highlight TSFunctionCall guifg=#CC99FF")
-    vim.cmd("highlight NvimTreeFolderName guifg=#ffffff")
-    vim.cmd("highlight DiffText guibg=#0047AB guifg=#ffffff")
-    vim.cmd([[let g:sonokai_style = 'maia']])
-    vim.cmd([[let g:sonokai_better_performance = 1]])
+-- return {
+--   'sainnhe/sonokai',
+--   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする,
+--   config = function()
+--     vim.g.sonokai_transparent_background = 1
+--     vim.cmd("highlight ColorColumn guibg=DarkBlue")
+--     vim.cmd("highlight Visual guibg=#555555")
+--     vim.cmd("highlight DiffText guibg=DarkBlue")
+--     vim.cmd("highlight TSPunctBracket guifg=#aaaaaa")
+--     vim.cmd("highlight TSPunctDelimiter guifg=#aaaaaa")
+--     vim.cmd("highlight TSLabel guifg=#FF9872")
+--     vim.cmd("highlight TSSymbol guifg=#A4C6FF")
+--     vim.cmd("highlight TSFunction guifg=#CC99FF")
+--     vim.cmd("highlight TSFunctionCall guifg=#CC99FF")
+--     vim.cmd("highlight NvimTreeFolderName guifg=#ffffff")
+--     vim.cmd("highlight DiffText guibg=#0047AB guifg=#ffffff")
+--     vim.cmd([[let g:sonokai_style = 'maia']])
+--     vim.cmd([[let g:sonokai_better_performance = 1]])
 
-    -- Highlight trailing whitespace
-    vim.cmd("highlight TrailingWhiteSpace ctermbg=red guibg=DarkRed")
-    vim.cmd("match TrailingWhiteSpace /\\s\\+$/")
+--     -- Highlight trailing whitespace
+--     vim.cmd("highlight TrailingWhiteSpace ctermbg=red guibg=DarkRed")
+--     vim.cmd("match TrailingWhiteSpace /\\s\\+$/")
 
-    vim.cmd("colorscheme sonokai")
-  end
-}
+--     vim.cmd("colorscheme sonokai")
+--   end
+-- }
 
 
 -- return {
@@ -77,17 +77,17 @@ return {
 --   end
 -- }
 
--- return {
---   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
---   "rockyzhang24/arctic.nvim",
---   dependencies = { "rktjmp/lush.nvim" },
---   name = "arctic",
---   branch = "main",
---   priority = 1000,
---   config = function()
---     vim.cmd("colorscheme arctic")
---   end
--- }
+return {
+  event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
+  "rockyzhang24/arctic.nvim",
+  dependencies = { "rktjmp/lush.nvim" },
+  name = "arctic",
+  branch = "main",
+  priority = 1000,
+  config = function()
+    vim.cmd("colorscheme arctic")
+  end
+}
 
 -- return {
 -- 	{
