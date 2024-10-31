@@ -7,6 +7,11 @@ autocmd("BufWritePre", {
 	command = ":%s/\\s\\+$//e",
 })
 
+autocmd("BufWritePre", {
+    pattern = "*",
+    command = "silent! !ctags -R -f .tags; --exclude=vendor --exclude=coverage --exclude=node_modules --exclude=config/webpack --exclude=public --exclude=bin",
+})
+
 -- ファイルを開いた時に、カーソルの場所を復元する
 autocmd({ "BufReadPost" }, {
 	pattern = { "*" },

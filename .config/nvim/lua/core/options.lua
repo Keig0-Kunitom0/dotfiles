@@ -33,3 +33,4 @@ opt.cursorline = true -- カーソル行ハイライト
 opt.ttyfast = true
 vim.cmd([[let &fcs='eob: ']]) -- 空行のチルダ（〜）の表示を消す
 vim.cmd([[set backspace=indent,eol,start]])
+vim.cmd([[set tags=./.tags;,.tags;]])

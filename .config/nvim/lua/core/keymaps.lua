@@ -38,3 +38,8 @@ keymap("v", ">", ">gv", opts)
 -- ref: https://zenn.dev/kenkenlysh/articles/9d6d8c40229d55
 local copy_file_path = require("scripts.copy_relative_file_path")
 vim.keymap.set('n', 'cp', copy_file_path.copy_relative_file_path, { silent = true, noremap = true })
+
+keymap("n", "<Space>l", "$", opts)
+
+-- tagsジャンプの時に複数ある時は一覧表示
+keymap("n", "go", "g<C-]>", opts)
