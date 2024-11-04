@@ -77,15 +77,59 @@
 --   end
 -- }
 
+-- return {
+--   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
+--   "rockyzhang24/arctic.nvim",
+--   dependencies = { "rktjmp/lush.nvim" },
+--   name = "arctic",
+--   branch = "main",
+--   priority = 1000,
+--   config = function()
+--     vim.cmd("colorscheme arctic")
+--   end
+-- }
+
+-- return {
+--   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
+--   'sainnhe/sonokai',
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     -- Optionally configure and load the colorscheme
+--     -- directly inside the plugin declaration.
+--     vim.g.sonokai_enable_italic = true
+--     -- vim.g.sonokai_style = 'atlantis'
+--     vim.cmd.colorscheme('sonokai')
+--   end
+-- }
+
+-- return {
+--   {
+--     event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
+--     'maxmx03/fluoromachine.nvim',
+--     lazy = false,
+--     priority = 1000,
+--     config = function ()
+--       local fm = require 'fluoromachine'
+
+--       fm.setup {
+--         glow = true,
+--         theme = 'fluoromachine',
+--         transparent = true,
+--       }
+
+--       vim.cmd.colorscheme 'fluoromachine'
+--     end
+--   }
+-- }
+
 return {
   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
-  "rockyzhang24/arctic.nvim",
-  dependencies = { "rktjmp/lush.nvim" },
-  name = "arctic",
-  branch = "main",
+  "scottmckendry/cyberdream.nvim",
+  lazy = false,
   priority = 1000,
-  config = function()
-    vim.cmd("colorscheme arctic")
+  config = function ()
+    vim.cmd("colorscheme cyberdream")
   end
 }
 
