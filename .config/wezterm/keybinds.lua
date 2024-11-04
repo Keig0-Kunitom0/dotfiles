@@ -169,13 +169,13 @@ return {
     { key = 'DownArrow', mods = 'SHIFT|ALT|CTRL', action = act.AdjustPaneSize{ 'Down', 1 } },
     { key = 'Copy', mods = 'NONE', action = act.CopyTo 'Clipboard' },
     { key = 'Paste', mods = 'NONE', action = act.PasteFrom 'Clipboard' },
-  },
-  key_tables = {
     -- コピーモード
     { key = 'X', mods = 'CTRL', action = act.ActivateCopyMode },
     { key = 'X', mods = 'SHIFT|CTRL', action = act.ActivateCopyMode },
     { key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
     { key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
+  },
+  key_tables = {
     copy_mode = {
       { key = 'Tab', mods = 'NONE', action = act.CopyMode 'MoveForwardWord' },
       { key = 'Tab', mods = 'SHIFT', action = act.CopyMode 'MoveBackwardWord' },

@@ -1,3 +1,4 @@
+-- hotkeyはHammerspoonで実現させている
 
 local wezterm = require 'wezterm';
 
@@ -8,6 +9,13 @@ config.automatically_reload_config = true
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
+
+-- フルスクリーンで起動
+local mux = wezterm.mux
+wezterm.on("gui-startup", function(cmd)
+    local tab, pane, window = mux.spawn_window(cmd or {})
+    window:gui_window():toggle_fullscreen()
+end)
 
 -- keybinds
 -- デフォルトのkeybindを無効化
@@ -20,9 +28,7 @@ local keybind = require 'keybinds'
 config.keys = keybind.keys
 config.key_tables = keybind.key_tables
 
--- Leaderキーの設定
-config.leader = { key = ",", mods = "CTRL" }
-
+-- config.leader = { key = ",", mods = "CTRL" }
 
 -- フォントサイズ変更
 config.font_size = 12.0
