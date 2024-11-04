@@ -9,7 +9,7 @@ autocmd("BufWritePre", {
 
 autocmd("BufWritePre", {
     pattern = "*",
-    command = "silent! !ctags -R -f .tags; --exclude=vendor --exclude=coverage --exclude=node_modules --exclude=config/webpack --exclude=public --exclude=bin",
+    command = "silent! !ctags -R --exclude=vendor --exclude=coverage --exclude=db/migrate --exclude=tmp --exclude=storage --exclude=node_modules --exclude=config/webpack --exclude=public --exclude=bin . -f .tags;",
 })
 
 -- ファイルを開いた時に、カーソルの場所を復元する
