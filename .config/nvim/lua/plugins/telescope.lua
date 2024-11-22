@@ -44,6 +44,10 @@ return {
           '--hidden',
         },
         winblend = 20,
+        file_ignore_patterns = {
+          "tags",
+          ".git"
+        },
       },
     })
     telescope.load_extension("fzf")

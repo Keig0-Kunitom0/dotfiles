@@ -26,13 +26,13 @@
 -- }
 
 
--- return {
---   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
---   "arturgoms/moonbow.nvim",
---   config = function()
---     vim.cmd([[colorscheme moonbow]])
---   end
--- }
+return {
+  event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
+  "arturgoms/moonbow.nvim",
+  config = function()
+    vim.cmd([[colorscheme moonbow]])
+  end
+}
 
 -- return {
 --   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
@@ -45,17 +45,6 @@
 --     require("tokyodark").setup(opts) -- calling setup is optional
 --     vim.cmd [[colorscheme tokyodark]]
 --   end,
--- }
-
--- return {
---   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
---   "sekke276/dark_flat.nvim",
---   config = function()
---     require("dark_flat").setup({
---       transparent = true
---     })
---     vim.cmd([[colorscheme dark_flat]])
---   end
 -- }
 
 
@@ -104,34 +93,14 @@
 -- }
 
 -- return {
---   {
---     event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
---     'maxmx03/fluoromachine.nvim',
---     lazy = false,
---     priority = 1000,
---     config = function ()
---       local fm = require 'fluoromachine'
-
---       fm.setup {
---         glow = true,
---         theme = 'fluoromachine',
---         transparent = true,
---       }
-
---       vim.cmd.colorscheme 'fluoromachine'
---     end
---   }
+--   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
+--   "scottmckendry/cyberdream.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   config = function ()
+--     vim.cmd("colorscheme cyberdream")
+--   end
 -- }
-
-return {
-  event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
-  "scottmckendry/cyberdream.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function ()
-    vim.cmd("colorscheme cyberdream")
-  end
-}
 
 -- return {
 -- 	{
@@ -143,6 +112,7 @@ return {
 -- 		end
 -- 	}
 -- }
+
 -- return {
 --   'ray-x/aurora',
 --   event = "VimEnter", -- neovim起動時にプラグインが読み込まれるようにする
